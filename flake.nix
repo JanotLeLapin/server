@@ -17,14 +17,14 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
-	./hardware-configuration.nix
+        ./hardware-configuration.nix
         home-manager.nixosModules.home-manager {
           home-manager.sharedModules = [
-            # sops-nix.homeManagerModules.sops
+            sops-nix.homeManagerModules.sops
           ];
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          # home-manager.extraSpecialArgs = ({});
+          home-manager.extraSpecialArgs = ({});
           home-manager.users.josephd = import ./home.nix;
         }
       ];

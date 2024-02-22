@@ -77,28 +77,22 @@
     bash gcc wget unzip glib ripgrep sops
   ];
 
-  networking.firewall.allowedTCPPorts = [
-    7070 4447 4444 7656
-    1776
-    9050
-    8080
-    25565
-    5030 5031 50300
-    3000
-  ];
+  networking.firewall.enable = false;
 
   services = {
-    i2pd = import ./systemd/i2pd inputs;
-    tor = import ./systemd/tor inputs;
     postgresql.enable = true;
   };
 
   systemd.services = {
-    xd = import ./systemd/xd inputs;
     qbittorrent = import ./systemd/qbittorrent inputs;
     soulseek = import ./systemd/soulseek inputs;
     mstream = import ./systemd/mstream inputs;
     minecraft = import ./systemd/minecraft inputs;
+  };
+
+  containers = {
+    i2pd-container = import ./containers/i2pd.nix inputs;
+    tor-container = import ./containers/tor.nix inputs;
   };
 
   system.stateVersion = "23.05"; # Did you read the comment?

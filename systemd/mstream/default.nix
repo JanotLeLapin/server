@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ pkgs, ... }: {
   description = "Music streaming server";
   wantedBy = [ "multi-user.target" ];
   wants = [ "network-online.target" ];

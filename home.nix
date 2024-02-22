@@ -17,5 +17,5 @@ in {
 
   systemd.user.services.spotifyd.Unit.After = [ "sops-nix.service" ];
 
-  # sops = import ./keys;
+  sops = import ./keys;
 }
