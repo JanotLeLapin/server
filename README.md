@@ -1,11 +1,11 @@
-# Janot's dotfiles
+# Janot's secondary dotfiles
 
-My configuration files for NixOS, Hyprland, Neovim, and more.
+This config runs on my secondary machine. It's pretty much the same as my [main config](https://github.com/JanotLeLapin/dots), but without the GUIs, and with some extra services, including:
 
-![Preview](./preview.png)
-
-## Setup
-
-*I'm assuming you're running NixOS*
-
-Clone this repository and run the utility `setup.sh` script I wrote because I'm lazy.
+- [QBitTorrent](https://www.qbittorrent.org/) client
+- [XD](https://xd-torrent.github.io/) BitTorrent client
+- [Tor](https://www.torproject.org/) node
+- [I2PD](https://i2pd.website/) node
+- Minecraft server
+- [Soulseek](https://github.com/slskd/slskd) client
+- [MStream](https://mstream.io/) server
