@@ -79,14 +79,8 @@
 
   networking.firewall.enable = false;
 
-  services = {
-    postgresql.enable = true;
-  };
-
   systemd.services = {
     qbittorrent = import ./systemd/qbittorrent inputs;
-    # soulseek = import ./systemd/soulseek inputs;
-    # mstream = import ./systemd/mstream inputs;
     minecraft = import ./systemd/minecraft inputs;
   };
 
