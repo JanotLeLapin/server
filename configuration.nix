@@ -85,14 +85,15 @@
 
   systemd.services = {
     qbittorrent = import ./systemd/qbittorrent inputs;
-    soulseek = import ./systemd/soulseek inputs;
-    mstream = import ./systemd/mstream inputs;
+    # soulseek = import ./systemd/soulseek inputs;
+    # mstream = import ./systemd/mstream inputs;
     minecraft = import ./systemd/minecraft inputs;
   };
 
   containers = {
     i2pd-container = import ./containers/i2pd.nix inputs;
     tor-container = import ./containers/tor.nix inputs;
+    sl-container = import ./containers/soulseek inputs;
   };
 
   system.stateVersion = "23.05"; # Did you read the comment?
