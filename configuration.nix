@@ -84,10 +84,9 @@
     minecraft = import ./systemd/minecraft inputs;
   };
 
-  containers = {
-    i2pd-container = import ./containers/i2pd.nix inputs;
-    tor-container = import ./containers/tor.nix inputs;
-    sl-container = import ./containers/soulseek inputs;
+  services = {
+    tor = import ./systemd/tor inputs;
+    i2pd = import ./systemd/i2pd inputs;
   };
 
   system.stateVersion = "23.05"; # Did you read the comment?
